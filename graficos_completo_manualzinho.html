@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"><canvas>
+
+
+<script>
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+pincel.fillStyle="lightgrey"
+pincel.fillRect(0,0,600,400);
+pincel.strokeRect(0,0,600,400);
+pincel.beginPath();
+
+function retangulo(cor,x,y,cima,lado){
+
+	pincel.beginPath();
+	pincel.fillStyle=cor;
+	pincel.fillRect(x,y,cima,lado);
+	pincel.strokeRect(x,y,cima,lado);
+
+}
+
+function escreve(cor,texto,a,b){
+
+	pincel.beginPath();
+	pincel.font ="17px Georgia";
+	pincel.fillStyle=cor;
+	pincel.fillText(texto,a,b);
+}
+
+escreve("purple","GRAFICO DE NAVEGADORES MAIS USADOS NOS ANOS DE 2015 E 2016",17,30)
+
+escreve("black","2015",150,100);
+retangulo("blue",150,150,50,50); escreve("black","50%",100,185);
+retangulo("green",150,200,50,25);escreve("black","25%",100,215);
+retangulo("yellow",150,225,50,20); escreve("black","20%",100,240);
+retangulo("red",150,245,50,5); escreve("black","5%",100,260);
+
+
+escreve("black","2016",350,100); 
+retangulo("blue",350,150,50,65); escreve("black","65%",300,185);
+retangulo("green",350,215,50,20); escreve("black","20%",300,215);
+retangulo("yellow",350,235,50,13); escreve("black","13%",300,240);
+retangulo("red",350,248,50,2); escreve("black","2%",300,260);
+
+escreve("black","Chrome",10,350); retangulo("blue",100,335,15,15);
+escreve("black","Fire Fox",150,350); retangulo("green",230,335,15,15);
+ escreve("black","Safari",290,350); retangulo("yellow",350,335,15,15);
+escreve("black","Outros",430,350); retangulo("red",500,335,15,15);
+
+
+
+</script>

@@ -1,0 +1,83 @@
+<meta charset="UTF-8">
+
+<big><h1>CLIQUE NO CENTRO DO ALVO O MAIS RÁPIDO QUE PUDER!!!</big></h1> <br><br>
+
+<canvas width="1600" height="900"></canvas>
+
+<script>
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+pincel.fillStyle = "white";
+pincel.fillRect(0,0,1600,900);
+pincel.fill();
+pincel.beginPath();
+pincel.fillStroke = "black"
+pincel.strokeRect(0,0,1600,900);
+
+function bola(x,y,raio,cor){
+
+    pincel.beginPath();
+    pincel.fillStyle = cor
+    pincel.arc(x,y, raio,0,2*Math.PI);
+    pincel.fill()
+
+}
+
+function limpa(){
+
+    pincel.clearRect(1,1,1600,900);
+}
+
+    var raio = 10
+    var xAle 
+    var yAle
+
+function sorteia(maximo){
+
+    return Math.floor(Math.random() * maximo);
+}
+
+
+function alvo(x,y){
+
+    bola(x,y,raio+20,"Red");
+    bola(x,y,raio+10,"white");
+    bola(x,y,raio,"Red");
+
+}
+
+function alvoSorteado(){
+
+    limpa();
+    xAle = sorteia(1050);
+    yAle = sorteia(750);
+    alvo(xAle,yAle)
+}
+
+
+setInterval(alvoSorteado, 800);
+
+function tiro(evento){
+
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+
+    if((x > xAle - raio)
+    && (x < xAle + raio)
+    && (y > yAle - raio)
+    && (y < yAle + raio)){
+    alert('Acertou!')
+    }else{
+   
+    }
+
+}
+
+
+
+tela.onclick = tiro
+
+
+</script>

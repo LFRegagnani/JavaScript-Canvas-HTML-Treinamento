@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+	
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+pincel.fillStyle ="lightGray";
+pincel.fillRect(0,0,600,400);
+pincel.strokeRect(0,0,600,400);
+pincel.beginPath();
+
+
+function criaQuadrado(x,y,tamanho,cor){
+
+	pincel.beginPath();
+	pincel.fillStyle = cor;
+	pincel.fillRect(x,y,tamanho,tamanho);
+	pincel.strokeRect(x,y,tamanho,tamanho);
+}
+
+
+function escreve(texto, x,y){
+
+
+pincel.font="20px Georgia";
+pincel.fillStyle="black";
+pincel.fillText(texto,x,y);
+
+}
+
+
+escreve("Fração 3/4",120,70);
+
+criaQuadrado(100,100,50,"green");
+criaQuadrado(150,100,50,"green");
+criaQuadrado(200,100,50,"green");
+criaQuadrado(250,100,50,"white");
+
+
+
+
+
+
+
+
+
+
+</script>

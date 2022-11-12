@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1>ESTE É UM ESQUADRO FEITO POR MIM! LUIZ</h1><hr><br>
+
+<canvas wigth="600" height="400"></canvas>
+
+
+<script>
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+
+pincel.fillStyle = "black";
+pincel.moveTo(60,40);
+pincel.lineTo(60,140);
+pincel.lineTo(160,140);
+pincel.fill();
+
+
+pincel.beginPath();
+pincel.fillStyle ="white"
+pincel.moveTo(75,75);
+pincel.lineTo(75,125);
+pincel.lineTo(125,125);
+pincel.lineTo(75,75);
+pincel.fill();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

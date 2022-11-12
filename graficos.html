@@ -1,0 +1,50 @@
+<canvas width="600" height="400"><canvas>
+
+<script>
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+pincel.fillStyle="lightgrey"
+pincel.fillRect(0,0,600,400);
+pincel.strokeRect(0,0,600,400);
+pincel.beginPath();
+var serie2015 = [50,25,20,5];
+var serie2016 = [65,20,13,2];
+var cores = ["blue","green","yellow","red"];
+
+
+function desenhaBarra(x, y, serie, cores, ano){
+
+
+	pincel.beginPath();
+	pincel.font ="18px Georgia";
+	pincel.fillStyle="black";
+	pincel.fillText(ano,x,y- 10);
+
+	pincel.beginPath();
+	pincel.fillStyle=cores[0];
+	pincel.fillRect(x, y, 50, serie[0]);
+	pincel.strokeRect(x, y, 50, serie[0]);
+
+	pincel.beginPath();
+	pincel.fillStyle=cores[1];
+	pincel.fillRect(x, y+serie[0], 50, serie[1]);
+	pincel.strokeRect(x, y+serie[0], 50,serie[1]);
+
+	pincel.beginPath();
+	pincel.fillStyle=cores[2];
+	pincel.fillRect(x,y+serie[0]+serie[1],50,serie[2]);
+	pincel.strokeRect(x,y+serie[0]+serie[1],50,serie[2]);
+
+	pincel.beginPath();
+	pincel.fillStyle=cores[3];
+	pincel.fillRect(x,y+serie[0]+serie[1]+serie[2],50,serie[3]);
+	pincel.strokeRect(x,y+serie[0]+serie[1]+serie[2],50,serie[3]);
+
+}
+	
+desenhaBarra(50, 50, serie2015, cores, '2015');
+desenhaBarra(150, 50, serie2016, cores, '2016');
+
+
+</script>

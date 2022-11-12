@@ -1,0 +1,89 @@
+LOGICA 1
+
+<meta charset="UTF-8">
+<br>
+<h1></h1>
+<big></big>
+<hr>
+alert()
+document.write()
+var variavel = prompt("campo para o usuario preencher")
+var variavel = numero ou função aleatoria
+function funçãoAleatoria(){
+}
+return
+if(){
+}else{}
+while(){
+}
+for(var loucura; loucura<=treta;loucura++){
+}
+break
+document.querySelector("")
+variavel.onclick = função
+variavel.value
+variavel.focus()
+Math.random()
+Math.round()
+ParseInt()
+var arraiys = [] //lembrar que posso criar uma variavel para controlar o numero do arrais que quero mostrar
+
+= é recebe
+== é realmente igual
+!== é diferente
+&& é e
+< é menor
+> é maior
+<= é menor ou igual
+>= é maior ou igual
+
+
+
+
+
+
+
+
+Logica 2
+
+console.log()
+
+<canvas width="600" height="400"> </canvas
+tela.getContext("2d");
+
+pincel.fillStyle = "lightgrey"
+pincel.fillRect(x,y,600,400)
+pincel.beginPath();
+pincel.moveTo(300, 200);
+pincel.lineTo(200,400);
+pincel.fill()
+pincel.arc(300,200, 50,0,2*3.14);
+pincel.fillStroke = "black"
+pincel.strokeRect(0,0,50,50);
+pincel.clearRect(1,1,598,398);
+
+
+
+pincel.fonts="20px Georgia";
+pincel.fillStyle="black";
+pincel.fillText("Qual é a fração?", 50, 30);
+
+
+function exibeAlerta(evento) {
+    var y = evento.pageX - tela.offsetRight;
+    var x = evento.pageY - tela.offsetTop;
+    alert("posição do clique : "+x+", " + y);
+}
+
+
+setInterval(função, milissegundos)
+
+
+
+
+
+
+
+
+
+

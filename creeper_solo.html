@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<h1>Eis a cabeça do Creeper</h1>
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+pincel.fillStyle = "darkgreen";
+pincel.fillRect(0,0,300,280);
+pincel.beginPath();
+
+pincel.fillStyle = "black";
+pincel.moveTo(40,50);
+pincel.lineTo(125,50);
+pincel.lineTo(125,130);
+pincel.lineTo(40,130);
+pincel.fill();
+pincel.beginPath();
+
+pincel.fillStyle = "black";
+pincel.moveTo(185,50);
+pincel.lineTo(270,50);
+pincel.lineTo(270,130);
+pincel.lineTo(185,130);
+pincel.fill();
+pincel.beginPath();
+
+pincel.fillStyle = "black";
+pincel.moveTo(125,130);
+pincel.lineTo(185,130);
+pincel.lineTo(185,235);
+pincel.lineTo(125,235);
+pincel.fill();
+pincel.beginPath();
+
+pincel.fillStyle = "black";
+pincel.moveTo(85,170);
+pincel.lineTo(125,170);
+pincel.lineTo(125,280);
+pincel.lineTo(85,280);
+pincel.fill();
+pincel.beginPath();
+
+pincel.fillStyle = "black";
+pincel.moveTo(185,170);
+pincel.lineTo(185,280);
+pincel.lineTo(225,280);
+pincel.lineTo(225,170);
+pincel.fill();
+pincel.beginPath();
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
